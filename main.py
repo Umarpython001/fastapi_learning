@@ -28,6 +28,13 @@ food = {
        "grams":500}
 }
 
+class Food(BaseModel):
+    name:str
+    classs:str
+    grams:int
+
+
+
 @app.get("/index")
 def home():
     a = "kqgysj.JWIYUAGH"
@@ -103,12 +110,6 @@ def product(
         json_ans["sort"] = sort
     return json_ans
 
-
-
-class Food(BaseModel):
-    name:str
-    classs:str
-    grams:int
     
 
 
