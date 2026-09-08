@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Path, Query
 from typing import Optional
 from enum import Enum
-from students.routes import studentRouter
-from students.database_models import Student, Course
+from backend.students.routes import studentRouter
+from backend.students.database_models import StudentDB, CourseDB
 from database import Base, engine
 
 
@@ -10,6 +10,7 @@ from database import Base, engine
 app = FastAPI() 
 
 app.include_router(studentRouter)
+
 
 
 
@@ -25,28 +26,6 @@ Base.metadata.create_all(bind=engine)
 
 
 
-
-# food = {
-
-#     "max":4,
-
-#     1:{"name":"milk",
-#        "classs":"protein",
-#        "grams":200
-#        },
-
-#     2:{"name":"eggs",
-#        "classs":"protein",
-#        "grams":300},
-
-#     3:{"name":"meat",
-#        "classs":"protein",
-#        "grams":150},
-
-#     4:{"name":"yam",
-#        "classs":"carbohydrate",
-#        "grams":500}
-# }
 
 # class Food(BaseModel):
 #     name:str
