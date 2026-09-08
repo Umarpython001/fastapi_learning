@@ -1,0 +1,5 @@
+Student register (auth with supabase / firebase)
+Student goes to courses page
+Student registers courses
+Courses get accepted, rejected or pending
+Student get's notified in their inbox
